@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import { routes } from "./routes";
 
 class App {
     private server: express.Application;
@@ -15,7 +16,7 @@ class App {
     }
 
     private routes(): void {
-
+        this.server.use(routes);
     }
 
     initialize(): void {
