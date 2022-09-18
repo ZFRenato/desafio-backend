@@ -1,31 +1,39 @@
 {
-  "name": "desafio-backend",
-  "version": "1.0.0",
-  "description": "![Logo OW Interactive](https://github.com/owInteractive/desafio-backend/raw/master/media/logo.jpg \"OW Interactive\")",
-  "main": "index.js",
-  "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZFRenato/desafio-backend.git"
-  },
-  "keywords": [],
-  "author": "Renato Carvalho",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZFRenato/desafio-backend/issues"
-  },
-  "homepage": "https://github.com/ZFRenato/desafio-backend#readme",
-  "devDependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.14",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.8.3"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.2",
-    "express": "^4.18.1"
-  }
+   "name": "desafio-backend",
+   "version": "1.0.0",
+   "description": "![Logo OW Interactive](https://github.com/owInteractive/desafio-backend/raw/master/media/logo.jpg \"OW Interactive\")",
+   "main": "index.js",
+   "scripts": {
+      "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ZFRenato/desafio-backend.git"
+   },
+   "keywords": [],
+   "author": "Renato Carvalho",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/ZFRenato/desafio-backend/issues"
+   },
+   "homepage": "https://github.com/ZFRenato/desafio-backend#readme",
+   "devDependencies": {
+      "@types/dotenv": "^8.2.0",
+      "@types/express": "^4.17.14",
+      "@types/node": "^16.11.10",
+      "ts-node-dev": "^2.0.0",
+      "typescript": "4.5.2",
+      "ts-node": "10.7.0"
+   },
+   "dependencies": {
+      "dotenv": "^16.0.2",
+      "express": "^4.18.1",
+      "mysql2": "^2.3.3",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.9",
+      "pg": "^8.4.0"
+   }
 }
