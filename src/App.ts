@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 
 class App {
-    public server: express.Application;
+    private server: express.Application;
 
     constructor() {
         this.server = express();
@@ -10,11 +10,11 @@ class App {
         this.routes();
     }
 
-    middleware(): void {
+    private middleware(): void {
         this.server.use(express.json());
     }
 
-    routes(): void {
+    private routes(): void {
 
     }
 
