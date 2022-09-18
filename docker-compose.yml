@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    container_name: DesafioBack
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src/app
