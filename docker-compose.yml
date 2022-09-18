@@ -1,6 +1,20 @@
 version: '3.7'
 
 services:
+  database_banck:
+    image: mysql
+    container_name: database_banck
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=database_banck
+      - MYSQL_USER=${USER_NAME_DB}
+      - MYSQL_PASSWORD=${PASSWORD_DB}
+      - MYSQL_ROOT_PASSWORD=${PASSWORD_DB_ROOT}
+    volumes:
+      - database_banck:/data/mysql
+
   app:
     build: .
     container_name: DesafioBack
@@ -9,3 +23,10 @@ services:
       - "${PORT}:${PORT}"
     volumes:
       - .:/src/app
+    links:
+      - database_banck
+    depends_on:
+      - database_banck
+
+volumes:
+  database_banck:
