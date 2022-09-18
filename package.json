@@ -4,6 +4,7 @@
   "description": "![Logo OW Interactive](https://github.com/owInteractive/desafio-backend/raw/master/media/logo.jpg \"OW Interactive\")",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
