@@ -1,6 +1,10 @@
 import "dotenv/config";
+import "reflect-metadata";
 import express from "express";
 import { routes } from "./routes";
+import { AppDataSource } from "./database/data-source";
+
+AppDataSource.initialize().then(() => console.log(`DB initialize`)).catch((error) => console.log(`DB error: ${error}`));
 
 class App {
     private server: express.Application;
