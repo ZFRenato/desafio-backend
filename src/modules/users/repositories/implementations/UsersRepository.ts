@@ -16,7 +16,8 @@ class UsersRepository implements IUserRepository {
         const user = this.repository.create({
             name,
             email,
-            birthday
+            birthday,
+            value: 0
         });
         return await this.repository.save(user);
     }

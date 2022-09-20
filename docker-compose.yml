@@ -26,7 +26,7 @@ services:
       - MYSQL_PASSWORD=${PASSWORD_DB}
       - MYSQL_ROOT_PASSWORD=${PASSWORD_DB_ROOT}
     volumes:
-      - todo-mysql-data:/var/lib/mysql 
+      - todo-mysql-data:/var/lib/mysql_
 
 volumes:
   todo-mysql-data:

@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm"
+import { MigrationInterface, QueryRunner, Table, TableForeignKey, TableIndex } from "typeorm"
 
 export class CreateUsers1663521342308 implements MigrationInterface {
 
@@ -27,6 +27,11 @@ export class CreateUsers1663521342308 implements MigrationInterface {
                         type: "timestamp"
                     },
                     {
+                        name: "value",
+                        type: "float",
+                        default: 0
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()"
@@ -45,5 +50,6 @@ export class CreateUsers1663521342308 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("users");
     }
+    
 
 }

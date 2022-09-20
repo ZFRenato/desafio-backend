@@ -3,6 +3,7 @@ up:
 		docker-compose up
 
 start app:
+		docker-compose stop
 		docker-compose start
 
 migrations: 
